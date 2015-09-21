@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>oppgave 6</title>
+		<meta charset="utf-8"/>
+		<script>
+			window.onload = oppstart;
+			function oppstart(){
+				document.getElementById("btnSubmit").onclick = nyBruker;
+			}
+			function nyBruker(){
+				var brukerNavn = document.getElementById("txtBrukernavn").value;
+				var passord1 = document.getElementById("txtPassord1").value;
+				var passord2 = document.getElementById("txtPassord2").value;
+				var melding;
+				if(brukerNavn != false  && passord1 != false){
+					if(passord1 == passord2){
+						melding = "Takk for registrering";
+					}
+					else{
+						melding = "Husk å skrive samme passord to ganger"; 
+					}
+				}
+				else{
+					melding = "Har du skrevet et brukernavn og passord?";
+				}
+				document.getElementById("txtOut").innerHTML = melding;
+			}
+		</script>
+	</head>
+	<body>
+		<div>
+			<h1>Oppgave 6</h1>
+				<input type="text" id="txtBrukernavn" placeholder="Bruker Navn"</input> <br />
+				<input type="password" id="txtPassord1" placeholder="passord"</input>
+				<input type="password" id="txtPassord2" placeholder="passord igjen"</input>
+				<button id="btnSubmit">Submit</button>
+				<p id="txtOut"></p>
+		</div>
+	</body>
+</html>

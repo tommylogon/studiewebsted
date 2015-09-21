@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>oppgave 3</title>
+		<meta charset="utf-8"/>
+		<script>
+			window.onload = oppstart;
+			function oppstart(){
+				document.getElementById("btnTest").onclick = testText;
+			}
+			function testText(){
+			var testVar = document.getElementById("txtName").value;
+			alert("Hei: " + testVar);
+		}
+		</script>
+	</head>
+	<body>
+		<div>
+			<h1>Oppgave 3</h1>
+				<input type="text" id="txtName" placeholder="Navn"</input><p>
+				<button id="btnTest">Test meg! </button>
+		</div>
+	</body>
+</html>

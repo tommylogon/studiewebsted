@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>oppgave 9</title>
+		<meta charset="utf-8"/>
+		<style>
+			
+		</style>
+		<script type="text/javascript">
+			window.onload = oppstart;
+			function oppstart(){
+			document.getElementById("btnTest").onmouseenter = enter;
+			document.getElementById("btnTest").onmouseleave = exit;
+			document.getElementById("btnTest").onclick = press;
+			document.getElementById("btnTest").ondblclick = doubblePress;
+			var melding;
+			}
+			function press(){
+				
+				melding = "stop touching me! :C"
+				document.getElementById("txtOut").innerHTML = melding;
+			}
+			function doubblePress(){
+				
+				melding = "Don't touch me there! :'("
+				document.getElementById("txtOut").innerHTML = melding;
+			}
+			function enter(){
+				
+				melding = "You are to close! :("
+				document.getElementById("txtOut").innerHTML = melding;
+			}
+			function exit(){
+				
+				melding = "Stay over there ya pervert! :|"
+				document.getElementById("txtOut").innerHTML = melding;
+			}
+		</script>
+	</head>
+	<body>
+		<button id="btnTest">Hello </button>
+		<p id="txtOut">Hi</p>
+	</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>oppgave 10</title>
+		<meta charset="utf-8"/>
+		<style>
+			
+		</style>
+		<script type="text/javascript">
+			window.onload = oppstart;
+			var tall = 0;
+			function oppstart(){
+			document.getElementById("btnTest").onclick = makeTxtBx;
+			
+			}
+			function makeTxtBx(){
+			var txtBxHolder =document.getElementById("txtBxHolder");
+			var allTxtBxs = document.getElementById("txtBxHolder").getElementsByTagName("input");
+				if(tall > 0){
+					txtBxHolder.removeChild(txtBxHolder.lastChild);
+					tall--;
+				}
+				else{
+					var newTxtBx = document.createElement("input");
+					newTxtBx.type="text";
+					txtBxHolder.appendChild(newTxtBx);
+					tall++;
+				
+				}
+			
+			}
+			
+		</script>
+	</head>
+	<body>
+		<div id="txtBxHolder">
+		
+		<button id="btnTest">sjekk</button>	
+		</div>
+		
+	</body>
+</html>

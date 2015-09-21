@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>oppgave 8</title>
+		<meta charset="utf-8"/>
+		<style>
+			#lblOut8{
+				display:inline-block; 
+				width:100px;
+				border:dotted black;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload = oppstart;
+			function oppstart(){
+			document.getElementById("btnCalc").onclick = fuelCalc;
+			
+			}
+			function fuelCalc(){
+				var liter = document.getElementById("txtFuel").value;
+				var distance = document.getElementById("txtDistance").value;
+				var fuelRate = document.getElementById("txtEfficenty").value;
+				var krL = document.getElementById("txtLiterPrice").value;
+				var result;
+				var literMax;
+				var literTotal;
+				var priceTotal;
+					literMax = liter / fuelRate;
+					literTotal = distance * fuelRate;
+					priceTotal = literTotal * krL;
+					literMax = literMax.toFixed(2);
+					literTotal = literTotal.toFixed(2);
+					priceTotal = priceTotal.toFixed(2);
+					document.getElementById("txtOut").innerHTML= literMax + " Km du kan kjøre. " + literTotal + " Hvor mange liter du vill bruke. " + priceTotal + " hvor mye det vill koste"; 
+			}
+			
+		</script>
+	</head>
+	<body>
+		<div>
+			<h1>Oppgave 8</h1>
+				<input type="text" id="txtFuel" placeholder="L "></input> <br />
+				<input type="text" id="txtDistance" placeholder="Distance"></input> <br />
+				<input type="text" id="txtEfficenty" placeholder="L/10Km"></input> <br />
+				<input type="text" id="txtLiterPrice" placeholder="Kr/L"></input> <br />
+				<p id="txtOut">ikke noe enda </p>
+				<button id="btnCalc" >calculate</button> <br />
+				
+				
+						
+						
+		</div>
+	</body>
+</html>

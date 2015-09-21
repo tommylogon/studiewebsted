@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>oppgave 4</title>
+		<meta charset="utf-8"/>
+		<script>
+			window.onload = oppstart;
+			function oppstart(){
+				document.getElementById("btnTest").onclick = testTelle;
+			}
+			function testTelle(){
+			var tall1 = parseInt(document.getElementById('box1').value);
+			var tall2 = parseInt(document.getElementById('box2').value);
+                        
+                        var tallplus = +tall1 + +tall2;
+                        var tallminu = tall1 - tall2;
+                        var tallgang = tall1 * tall2;
+                        var talldele = tall1 / tall2; 
+						
+						alert(tallplus);
+                        alert(tallminu);
+                        alert(tallgang);
+                        alert(talldele);
+			}	
+		</script>
+	</head>
+	<body>
+		div>
+			<h1>Oppgave 4</h1>
+				<input type="text" id="box1" </input><p>
+				<input type="text" id="box2" </input><p>
+				<button id="btnTest">time to telle</button>
+		</div>
+	</body>
+</html>

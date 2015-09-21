@@ -1,0 +1,255 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 25, 2015, 1:10:01 PM
+    Author     : Tommy
+*/
+body {
+    background-color: lightblue  ;
+}
+#nav {
+    position: relative;
+    width: 620px;
+    margin: 0 auto;
+    margin-top:50px;
+    padding:10px;
+}
+ul#navigation {
+    margin:0px auto;
+    position: relative;
+    float:left;
+    border-left: 1px solid #c4dbe7;
+    border-right: 1px solid #c4dbe7;
+    padding-left: 0;
+}
+ul#navigation li{
+    display:inline;
+    font-size:12px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    float:left;
+    position:relative;
+    border-top: 1px solid #c4dbe7;
+    border-bottom: 2px solid #c4dbe7;
+}
+ul#navigation li a{
+    padding: 10px 25px;
+    color: #616161;
+    text-shadow: 1px 1px 0px #fff;
+    text-decoration: none;
+    display: inline-block;
+    border-right: 1px solid #fff;
+    border-left: 1px solid #c2c2c2;
+    border-top: 1px solid #fff;
+    background: #f5f5f5;
+    
+    -webkit-transition: color 0.2s linear,background 0.2s linear;
+    -moz-transition: color 0.2s linear, background 0.2s linear;
+    -o-transition: color 0.2s linear, background 0.2s linear;
+    transition: color 0.2s linear, background 0.2s linear;
+
+    }
+ul#navigation li a:hover{
+    background: #f8f8f8;
+    color:#282828;
+}
+ul#navigation li a.first{
+    border-left: 0 none;
+}
+ul#navigation li a.last{
+    border-right: 0 none;
+}
+ul#navigation li:hover{
+    background: #fff;
+}
+ul#navigation li:hover > ul{
+    visibility: visible;
+    opacity: 1;
+}
+ul#navigation ul, ul#navigation ul li ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    z-index: 99999;
+    width: 180px;
+    background: #f8f8f8;
+    box-shadow: 1px 1px 3px #ccc;
+
+  
+}
+ul#navigation ul{
+    top: 38px;
+    left:1px;
+}
+ul#navigation ul li ul {
+    top:0;
+    left: 181px;
+}
+ul#navigation ul li{
+    clear: both;
+    width: 100%;
+    border: 0 none;
+    border-bottom: 1px solid #c9c9c9;
+}
+ul#navigation ul li a{
+    background: none;
+    padding: 7px 15px;
+    color: #616161;
+    text-shadow: 1px 1px 0px #fff;
+    display: inline-block;
+    border:0 none;
+    float: left;
+    clear: both;
+    width: 150px;
+}
+#tabgame tr td{
+    border: solid aqua;
+}
+#divgame{
+    background-color: red;
+    margin: 1px;
+    clear:both;
+    width: 410px;
+    padding: 5px;
+}
+#content{
+    background-color: lightgreen;
+    clear: both;
+    margin-top:0px auto -160px;
+	margin-top:0px;
+	margin-right:auto;
+	margin-bottom: -160px;
+	margin-left:auto;
+    position: relative;
+    text-align: center;
+}
+#ucontent{
+    margin: 20px 20px 80px;
+	max-width: 900px;
+	background-color:lightblue;
+	
+	padding: 30px;
+	text-align: left;
+	
+	display: inline-block;
+	}
+aside{
+    clear:left; 
+    float:right;
+    width: 250px;
+    height:400px;
+    background-color: aqua;
+}
+
+#tommyjpg{
+    width: 200px;
+}
+header{
+    background-color: blue;
+    text-align: center;
+}
+footer{    
+    background-color: blue;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+}
+#space{
+    width: 100%;
+    height: 600px;
+    background-color: lightblue;
+    z-index:-1;
+}
+.contentoppgaver{
+	border:3px solid green;
+	margin: 10px;
+	padding:3px;
+	height:auto;
+}
+.box {
+	width: 100px; 
+	height:100px;
+	float: left; 
+	margin: 0 10px 10px 0; 
+	clear:none;
+	}
+.red {
+	color: red; 
+	background: pink; 
+	}
+.blue {
+	color: blue; 
+	background: aqua;
+	}
+.green {
+	color: green; 
+	background: lightgreen; 
+	}
+.border { 
+	border: 5px solid black; 
+}
+.box1 {
+	width: 108px;
+	height :108px;
+	padding: 42px;
+	border: 23px;
+	margin:16px;
+	clear:none;
+	float:left;
+}
+.box1.boxstyle1{
+	border-style:solid;
+	border-color:green,
+	color:lightblue;
+	background:yellow;
+	
+}
+#red{
+	color:red;
+}
+div.static{
+	width:250px;
+	position:static;
+	left:350px;
+	border : 1px solid green;
+	background-color:red;
+}
+div.relative {
+	top:0px;
+	left:500px;
+	width:250px;
+	height:124px;
+	border : 1px solid green;
+	position:relative;
+	background-color:blue;
+}
+div.fixed{
+	bottom:250px;
+	right:550px;
+	width:250px;
+	height:124px;
+	border : 1px solid green;
+	position:fixed;
+	background-color:yellow;
+
+}
+div.absolute{
+	width:105px;
+	height:102px;
+	border : 1px solid green;
+	position:absoulte;
+	background-color:green;
+}
+#opp2{
+	height:250px;
+}
+#opp3{
+	height:450px;
+}
