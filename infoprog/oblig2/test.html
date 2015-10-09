@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Testside</title>
+<script>
+	
+window.onload = oppstart;
+
+var opptelling = [0,0,0,0,0,0];
+
+function oppstart() {
+    document.getElementById("btnSlaa").onclick = slaa;
+}
+	
+function slaa() {
+
+	var oeyne = Math.floor(Math.random() * 6) + 1;    // 1,2,3,4,5,6
+	
+	opptelling[oeyne-1]++;
+	
+    document.getElementById("terning").innerHTML = oeyne;
+	
+	document.getElementById("statistikk").innerHTML = "";
+	
+	for(var i=0;i<opptelling.length;i++) {
+	
+	
+		var nyttElement = document.createElement("div");
+		nyttElement.innerHTML += "Antall "+(i+1)+"ere: " + (opptelling[i]<10?"0":"")+ opptelling[i] + " ";
+		
+		var nyGraf = document.createElement("img");
+		nyGraf.src = "piksel.png";
+		nyGraf.style.height = "20px";
+		nyGraf.style.width = opptelling[i]*20 + "px";
+		
+		nyttElement.appendChild(nyGraf);
+		
+			
+		document.getElementById("statistikk").appendChild(nyttElement);
+		
+		
+	}
+	
+}
+	
+</script>
+<style>
+</style>
+</head>
+<body>
+    <button id="btnSlaa">Slaa</button>
+    <div>Terningen viser: <span id="terning">[Tall]</span></div>
+	<div id="statistikk"></div>
+</body>
+</html>

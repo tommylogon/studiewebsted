@@ -1,0 +1,32 @@
+div.static{
+	width:250px;
+	position:static;
+	border : 1px solid green;
+	background-color:red;
+}
+div.relative {
+	top:0px;
+	left:500px;
+	width:250px;
+	height:124px;
+	border : 1px solid green;
+	position:relative;
+	background-color:blue;
+}
+div.fixed{
+	top:250px;
+	left:25px;
+	width:250px;
+	height:124px;
+	border : 1px solid green;
+	position:fixed;
+	background-color:yellow;
+
+}
+div.absolute{
+	width:105px;
+	height:102px;
+	border : 1px solid green;
+	position:absoulte;
+	background-color:green;
+}

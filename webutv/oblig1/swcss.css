@@ -206,8 +206,8 @@ footer{
 }
 .box1.boxstyle1{
 	border-style:solid;
-	border-color:green;
-	color: lightblue;
+	border-color:green,
+	color:lightblue;
 	background:yellow;
 	
 }
@@ -252,11 +252,4 @@ div.absolute{
 }
 #opp3{
 	height:450px;
-}
-.contentoppgaver ol {
-	border:3px lightgreen solid;
-
-}
-.contentoppgaver table tr td {
-	border:1px solid blue;
 }

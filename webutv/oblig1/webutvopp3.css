@@ -1,0 +1,74 @@
+.contentoppgaver{
+	
+}
+.box {
+	width: 100px; 
+	height:100px;
+	float: left; 
+	margin: 0 10px 10px 0; 
+	}
+.red {
+	color: red; 
+	background: pink; 
+	}
+.blue {
+	color: blue; 
+	background: lightblue;
+	}
+.green {
+	color: green; 
+	background: lightgreen; 
+	}
+.border { 
+	border: 5px solid black; 
+}
+.div {
+	width: 108px;
+	height :108px;
+	padding: 42px;
+	border: 23px;
+	margin:16px;
+	clear:both;
+}
+.div.boxstyle1{
+	border-style:solid;
+	border-color:green,
+	color:lightblue;
+	background:yellow;
+	
+}
+#red{
+	color:red;
+}
+div.static{
+	width:250px;
+	position:static;
+	border : 1px solid green;
+	background-color:red;
+}
+div.relative {
+	top:0px;
+	left:500px;
+	width:250px;
+	height:124px;
+	border : 1px solid green;
+	position:relative;
+	background-color:blue;
+}
+div.fixed{
+	top:250px;
+	left:25px;
+	width:250px;
+	height:124px;
+	border : 1px solid green;
+	position:fixed;
+	background-color:yellow;
+
+}
+div.absolute{
+	width:105px;
+	height:102px;
+	border : 1px solid green;
+	position:absoulte;
+	background-color:green;
+}

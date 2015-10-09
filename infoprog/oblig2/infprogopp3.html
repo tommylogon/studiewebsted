@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="../../swcss.css">
+		<script>
+			window.onload = oppstart;
+			
+			function oppstart(){
+				document.getElementById("btnBeregn").onclick = renteCalc;
+			}
+			function renteCalc(){
+				var sum = document.getElementById("txtSum").value;
+				var rente = document.getElementById("txtRente").value;
+				var aar = document.getElementById("txtAar").value;
+				document.getElementById("utskrift").innerHTML = " ";
+				
+				for (i=0;i<=aar;i++){
+				var ut = sum*Math.pow(rente, i);
+					document.getElementById("utskrift").innerHTML += "etter " + i	 + " år"  + " har du " + ut.toFixed(2) + " kr" + " på banken" + "<br />";
+					
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="contentoppgaver">
+			<input type="number" id="txtSum" placeholder="Summen å beregne"></input>
+			<input type="number" id="txtRente" placeholder="Rent i %"></input>
+			<input type="number" id="txtAar" placeholder="Antall år"></input>
+			<button id="btnBeregn">regne</button>
+			<p id="utskrift">*</p>
+		</div>
+	</body>
+</html>

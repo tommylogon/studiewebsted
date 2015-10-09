@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Webutvikling oppgave E5</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="webutvoppE5.css"/>
+		
+	</head>
+	<body>
+		<div class="contentoppgaver">
+		<h1>Oppgave E5</h1>
+		<p> det menes at nyere tagger som kommert i html 5 ikke nødvendigvis virker med eldre nettlesere, 						<br />
+			men det gjør at nettleserne velger å foradre på ting så dem kan skjønne ting å vise det istedenfor å sitte fast. 	<br />
+			dette gjør den ved å gå videre til tagger som den skjønner, å det er det som menes med fallback-løsningen,			<br />
+			som istedenfor å bruke en <.button> tag så  kanskje du skal brukte <.input type="button"> istedenfor. 				<br />
+			fallback i css er gjort på denne måten:														   					 	<br />
+			#cssNy { 																											<br />
+					opacity:0.5;																								<br />
+			}																													<br />
+			#cssGammel{																											<br />
+					-ms-filter;"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";											<br />
+					filter:alpha(opacity=50);																					<br />
+			}																													<br />
+			#cssFallback{																										<br />
+				-ms-filter;"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";												<br />	
+				filter:alpha(opacity=50);																						<br />
+				opacity:0.5;																									<br />
+			}																													<br />
+			denne koden viser da først den nye css egenskapen for gjennomsiktighet, den vill ikke virke i gamle nettelsere,<br />
+			så for og forsikre seg bør amn da legge in den gamle css egenskapen for gjennomsiktighet i samme css sektion, <br />
+			med det gamle overst. dette vill forsikre at nettelseren kan lese koden som den skal, men hvis den ikek skjønner<br />
+			den siste funksjon så hopper den bare over den men det som står føre, altså den gamle versionen blir forsatt lest og virker.<br /> 
+			
+		</p>
+		</div>
+	</body>
+</html>

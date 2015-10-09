@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="../../swcss.css">
+		<script>
+			window.onload = oppstart;
+			
+			function oppstart(){
+				document.getElementById("btnStart").onclick = nyeBokser;
+			}
+			function nyeBokser (){
+				var teksten = document.getElementById("txtTeksten").value;
+				var antall = document.getElementById("txtAntall").value;
+				document.getElementById("utskrift").innerHTML = "";
+				if(antall < 100){
+					 
+					for(var i = 0; i < antall; i++ ){
+						document.getElementById("utskrift").innerHTML += teksten + "<br/>" ;
+						
+					}
+				}
+				else{
+				document.getElementById("utskrift").innerHTML = "du har for høyt tall";
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div lass="contentoppgaver">
+			<input type="text" id="txtTeksten" placeholder="tekst" />
+			<input type="number" id="txtAntall" placeholder="antall" />
+			<button id="btnStart">trykk meg</button>
+			<p id="utskrift">buh</p>
+		</div>
+	</body>
+</html>

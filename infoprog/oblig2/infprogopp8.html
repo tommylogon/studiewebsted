@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="../../swcss.css">
+		<script>
+			window.onload = oppstart;
+			
+			function oppstart(){
+				document.getElementById("btnStart").onclick = arrayNavn;
+			}
+			function arrayNavn(){
+				var navn = ["Tommy","Tham","Erica","Micke","Frank","Alicia","Marianne","Stigh"];
+				var navnUt = [];
+				var navn1 = "";
+				var navn2 = "";
+				var navn3 = "";
+				document.getElementById("utskrift").innerHTML = "";
+				
+				for(var i=0;i<3;i++){
+					var rand = Math.floor(Math.random()*navn.length);
+					if(navn1 == ""){
+						navn1 = navn[rand];
+					}
+					
+					else if(navn2 == ""){
+						if(navn[rand] == navn1){
+						rand = Math.floor(Math.random()*navn.length);
+						}
+						if(navn[rand] == navn1){
+						rand = Math.floor(Math.random()*navn.length);
+						}
+						else{
+						navn2 = navn[rand];
+						}
+					}
+					else if(navn3 == ""){
+						if(navn[rand] == navn1 || navn[rand] == navn2 || navn1 == navn2 ){
+						rand = Math.floor(Math.random()*navn.length);
+						i--;
+						}
+						else{
+						navn3 = navn[rand];
+						}
+					}
+					
+					
+				}
+				if(navn1 != navn2 && navn1 != navn3 && navn2 != navn3){
+						//document.getElementById("utskrift").innerHTML += navn1 + "<br/>" + navn2+ "<br/>" + navn3 + "<br/>" +  "<br/>";
+						navnUt.push(navn1);
+						navnUt.push(navn2);
+						navnUt.push(navn3);
+						
+					}
+				document.getElementById("utskrift").innerHTML = navnUt;
+				if(navn1 != navn2 && navn1 == navn3 && navn2 == navn3){
+					alert("welp shit you suck tommy!");
+				}
+			}
+			
+		</script>
+		<style>
+			
+		</style>
+	</head>
+	<body>
+		<div class="contentoppgaver">
+			
+			<button id="btnStart">please dont touch me :C</button>
+			<p id="utskrift"></p>
+		</div>
+	</body>
+</html>

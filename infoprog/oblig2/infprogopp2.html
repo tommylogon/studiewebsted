@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="../../swcss.css">
+		<script>
+			window.onload = oppstart;
+			
+			function oppstart(){
+				document.getElementById("btnTelleOpp").onclick = telleOpp ;
+				document.getElementById("btnTelleNed").onclick = telleNed;
+				document.getElementById("btnDelePaaTo").onclick = delePaTo;
+				document.getElementById("btnDelePaaTre").onclick = delePaTre;
+				document.getElementById("btnParTall").onclick = parTall;
+				document.getElementById("btnOddeTall").onclick = oddeTall;
+				document.getElementById("btnPosetivNegativ").onclick = poseOgNegativ;
+			}
+			function telleOpp(){
+				document.getElementById("utskrift").innerHTML = "";
+				for (var i=0;i<=100;i++){
+					document.getElementById("utskrift").innerHTML += i + " ";
+				}
+			}
+			function telleNed(){
+				document.getElementById("utskrift").innerHTML = "";
+				for (var i=100;i>=0;i--){
+					document.getElementById("utskrift").innerHTML += i + " ";
+				}
+			}
+			function delePaTo(){
+				document.getElementById("utskrift").innerHTML = "";
+				for(var i=0;i<=100;i++){
+						document.getElementById("utskrift").innerHTML += i/2 + " ";
+				}
+			}
+			function delePaTre(){
+				document.getElementById("utskrift").innerHTML = "";
+				for (var i=0;i<100;i++){
+					if(i%3==0){
+						document.getElementById("utskrift").innerHTML += i + " ";
+					}
+				}
+			}
+			function parTall (){
+			document.getElementById("utskrift").innerHTML = "";
+				for(var i=0;i<=100;i++){
+					if(i%2 == 0){
+						document.getElementById("utskrift").innerHTML += i + " ";
+					}
+				}
+			}
+			function oddeTall(){
+			document.getElementById("utskrift").innerHTML = "";
+				for(var i=0;i<=100;i++){
+					if(i%2 == 1){
+						document.getElementById("utskrift").innerHTML += i + " ";
+					}
+				}
+			}
+			function poseOgNegativ(){
+			document.getElementById("utskrift").innerHTML = "";
+				for(i=0;i<=100;i++){
+					if(i%2 == 0){
+						document.getElementById("utskrift").innerHTML += i + " ";
+					}
+					else{
+						var tall = i*2
+						document.getElementById("utskrift").innerHTML += i-tall + " ";
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="contentoppgaver">
+			<button id="btnTelleOpp">Jeg teller opp</button>
+			<button id="btnTelleNed">Jeg teller ned</button>
+			<button id="btnDelePaaTo">Jeg deler på to</button>
+			<button id="btnDelePaaTre">Jeg deler på tre</button>
+			<button id="btnParTall">Jeg teller partall</button>
+			<button id="btnOddeTall">Jeg teller oddeatall</button>
+			<button id="btnPosetivNegativ">Jeg tellerposetiv og negativt</button>
+			<p id="utskrift">buh</p>
+		</div>
+	</body>
+</html>

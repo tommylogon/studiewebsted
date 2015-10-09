@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="../../swcss.css">
+		<script>
+			window.onload = oppstart;
+			
+			function oppstart(){
+				document.getElementById("btnBeregn").onclick = kombinasjon;
+			}
+			function kombinasjon(){
+				var number1 = 1;
+				var number2 = 0;
+				document.getElementById("utskrift").innerHTML = "";
+					while (number1!=5){
+						for (i=0;i<=5;i++){
+							number2++;
+								if(number2 === 6){
+								number1++;
+								number2=1;
+								document.getElementById("utskrift").innerHTML += "<br />";
+								}
+						document.getElementById("utskrift").innerHTML += number1 + "" + number2 + " "; 
+						}
+					}
+					number2++;
+					document.getElementById("utskrift").innerHTML += number1 + "" + number2 + " "; 
+			}
+		</script>
+	</head>
+	<body>
+		<div class="contentoppgaver">
+			<button id="btnBeregn">regne</button>
+			<p id="utskrift">*</p>
+		</div>
+	</body>
+</html>

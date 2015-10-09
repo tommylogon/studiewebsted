@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="../../swcss.css">
+		<script>
+			window.onload = oppstart;
+			
+			function oppstart(){
+				document.getElementById("btnStart").onclick = manedKalkulator;
+				
+				var firstDay = document.getElementById("selFirstDay");
+				var dayNames = ["ma","ti","on","to","fr","lø","sø"];
+				
+				for(var i=0; i<dayNames.length;i++){
+					var opt = dayNames[i];
+					var newOpt = document.createElement("option");
+					newOpt.textContent = opt;
+					newOpt.value = opt;
+					firstDay.appendChild(newOpt);
+				}
+			}
+			function manedKalkulator(){
+				var dayNames = ["ma","ti","on","to","fr","lø","sø"];
+				var emptyDays = ["__","__","__","__","__","__","__",];
+				var numOfDays = 1;
+				var numOfEmptyDays = dayNames.indexOf(document.getElementById("selFirstDay").value);
+				
+					if(document.getElementById("rb28").checked === true){
+						numOfDays=document.getElementById("rb28").value;
+					}
+					else if(document.getElementById("rb29").checked === true){
+						numOfDays=document.getElementById("rb29").value;
+					}
+					else if(document.getElementById("rb30").checked === true){
+						numOfDays=document.getElementById("rb30").value;
+					}
+					else{
+						numOfDays=document.getElementById("rb31").value;
+					}
+				document.getElementById("utskrift").innerHTML = "";
+				
+				
+				
+				for(var i=0;i<dayNames.length;i++){
+					document.getElementById("utskrift").innerHTML += dayNames[i] + " ";
+				}
+				
+				document.getElementById("utskrift").innerHTML += "<br />";
+				
+				for(var i=0;i<numOfEmptyDays;i++){
+					document.getElementById("utskrift").innerHTML += emptyDays[i] + " ";
+				}
+				for(var j=1;j<=numOfDays;j++){
+				k=i+j
+					if(j<10){
+						document.getElementById("utskrift").innerHTML += "_";
+					}
+					document.getElementById("utskrift").innerHTML += j + " ";
+					if(k%7===0){
+						document.getElementById("utskrift").innerHTML += "<br/>";
+					}
+				}
+				
+			}
+		</script>
+		<style>
+			p{
+				font-family:"courier new";
+			}	
+		</style>
+	</head>
+	<body>
+		<div class="contentoppgaver">
+			<select id="selFirstDay">
+				
+			</select>
+			<input type ="radio" id="rb28" name="dager" value="28">28 dager</input>
+			<input type ="radio" id="rb29" name="dager" value="29">29 dager</input>
+			<input type ="radio" id="rb30" name="dager" value="30">30 dager</input>
+			<input type ="radio" id="rb31" name="dager" value="31">31 dager</input>
+			<button id="btnStart">Start</button>
+			<p id="utskrift"></p>
+		</div>
+	</body>
+</html>

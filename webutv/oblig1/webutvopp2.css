@@ -1,0 +1,21 @@
+.box {
+	width: 100px; 
+	height:100px;
+	float: left; 
+	margin: 0 10px 10px 0; 
+	}
+.red {
+	color: red; 
+	background: pink; 
+	}
+.blue {
+	color: blue; 
+	background: lightblue;
+	}
+.green {
+	color: green; 
+	background: lightgreen; 
+	}
+.border { 
+	border: 5px solid black; 
+}

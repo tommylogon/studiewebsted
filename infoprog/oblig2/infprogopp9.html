@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="../../swcss.css">
+		<script>
+			window.onload = oppstart;
+			
+			function oppstart(){
+				document.getElementById("btnStart").onclick = print;
+			}
+			var words=[];
+			var i=0;
+			var textArr= [];
+			var funn=0;
+			
+			function print(){
+				var text = document.getElementById("txtText").value;
+				words[i];
+				textArr[i]
+				document.getElementById("utskrift").innerHTML = "";
+				document.getElementById("utskrift2").innerHTML = "";
+				
+					words[i] = text;
+					textArr = words[i].split(" ");
+					document.getElementById("utskrift").innerHTML = textArr;
+					i++;
+					for(k=0;k<textArr.length;k++){
+						
+						var nyttElement = document.createElement("div");
+						if(!funn==0){
+							if(textArr[k] == textArr[0]){
+								break;
+							}
+						}
+						var funn=0;
+							
+						for(j=0;j<textArr.length;j++){
+							if(textArr[k]=== textArr[j]){
+								funn++;
+								if(funn>1){
+									nyttElement.innerHTML = textArr[k] + " " + funn;
+								}
+								else{
+								nyttElement.innerHTML += textArr[k] + " " + funn;
+								}
+								var nyGraf = document.createElement("img");
+								nyGraf.src = "piksel.png";
+								nyGraf.style.height = "20px";
+								nyGraf.style.width = funn*20 + "px";
+								nyttElement.appendChild(nyGraf);
+
+
+								document.getElementById("utskrift2").appendChild(nyttElement);
+								
+							}
+						}
+					}
+			}
+			function array(){
+				
+			}
+			
+		</script>
+		<style>
+			
+		</style>
+	</head>
+	<body>
+		<div class="contentoppgaver">
+			
+			<input type="text" id="txtText" placeholder="skriv her"></input>
+			<button id="btnStart">start</button>
+			<p id="utskrift"></p>
+			<p id="utskrift2"></p>
+		</div>
+	</body>
+</html>
