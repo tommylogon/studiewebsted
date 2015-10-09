@@ -1,0 +1,196 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" type="text/css" href="../../swcss.css"/>
+		<script>
+			
+			window.onload = oppstart;
+
+			function oppstart(){
+				document.getElementById("txtWord").value = "";
+				
+				document.getElementById("btnSend").onclick = start;
+			}
+				var words = ["logitech","benq","barnbarn","samsung","creative","prisjakt","prompille","coca cola","briller"];
+				var randomOrd = Math.floor(Math.random()*words.length);
+				var hide =[];
+				var j=0;
+				var p=0;
+				var foundGlobal;
+			function start(){
+				
+				var canvas = document.getElementById("myCanvas");
+				var ctx = canvas.getContext("2d");
+				var guess = document.getElementById("txtWord").value;
+				var wrong = [base,poleVertical,poleHorisontal,rope,head,body,leftLeg,rightLeg,leftArm,rightArm]
+				var rightWord = sliceWords(words,randomOrd);
+				var hide = hideAnswer(rightWord);
+				var found = foundLetters(hide);
+				if(p==0){
+				foundGlobal = found;
+				p++;
+				}
+				document.getElementById("utskrift2").innerHTML = foundGlobal;
+			
+				
+				
+				if(guess==""){
+					alert("du må gjette noe da din tullig!")
+				}
+				else{
+					guessesLeft(ctx,guess,rightWord,randomOrd,wrong);
+					seeIfRight(rightWord,ctx);
+				}
+				document.getElementById("txtWord").value = "";
+			}
+			
+			function sliceWords(words,randomOrd){
+				var word = words[randomOrd]
+				var slicedWord = word.split("");
+				
+				return slicedWord;
+			}
+			
+			function guessesLeft(ctx,guess,rightWord,randomOrd,wrong){
+				for(var t=0;t<=rightWord.length;t++){
+					if(guess==rightWord[t]){
+						foundGlobal.splice(t,1,guess);
+						document.getElementById("utskrift2").innerHTML = foundGlobal;
+						
+					}
+					
+				}
+				if(rightWord.indexOf(guess)==-1){
+						wrong[j](ctx);
+						j++;
+						document.getElementById("utskrift").innerHTML += guess ;
+						lost(j,rightWord,ctx);
+						
+					}
+				
+			}
+			function seeIfRight(rightWord,ctx){
+			var pointsToWin=0;
+				for(var t=0;t<=rightWord.length-1;t++){
+					if(foundGlobal[t]==rightWord[t]){
+						
+						pointsToWin++;
+					}
+				}
+					if(pointsToWin==rightWord.length){
+						ctx.fillText("YOU WIN!",52,37);
+					
+					ctx.strokeStyle="red";
+					ctx.stroke();
+					}
+			}
+			
+			function gameOver(ctx){
+					ctx.fillText("GAME OVER",52,37);
+					
+					ctx.strokeStyle="red";
+					ctx.stroke();
+			}
+			function lost (j,rightWord,ctx){
+				if(j==10){
+					gameOver(ctx);
+				}
+			}
+			function wrongAnswer(wrong,ctx){
+					base(ctx,words,guess,randomOrd);
+					poleVertical(ctx,words,guess);
+					poleHorisontal(ctx,words,guess);
+					rope(ctx,words,guess);
+					head(ctx,words,guess);
+					body(ctx,words,guess);
+					leftLeg(ctx,words,guess);
+					rightLeg(ctx,words,guess);
+					leftArm(ctx,words,guess);
+					rightArm(ctx,words,guess);
+			}
+			function hideAnswer (rightWord){
+				var hiddenWord = [];
+					for(var i=0; i<rightWord.length;i++){
+						hiddenWord.splice(i,0,"_");
+				}
+				return hiddenWord;
+			}
+			function foundLetters(hide){
+				var holdingArray;
+				holdingArray = hide.slice();
+				return holdingArray;
+				
+			}
+			function base(ctx){
+					ctx.moveTo(50,100);
+					ctx.lineTo(50,75);
+					ctx.lineTo(100,75);
+					ctx.lineTo(100,100);
+					ctx.stroke();	
+			}
+			function poleVertical(ctx){
+				ctx.moveTo(75,75);
+				ctx.lineTo(75,25);
+				ctx.stroke();
+			}
+			function poleHorisontal(ctx){
+				ctx.moveTo(75,25);
+				ctx.lineTo(100,25);
+				ctx.stroke();
+			}
+			function rope(ctx){
+				ctx.moveTo(100,25);
+				ctx.lineTo(100,40);
+				ctx.stroke();
+			}
+			function head(ctx){
+				ctx.beginPath();
+				ctx.arc(100,45,5,0,2*Math.PI);
+				ctx.stroke();
+			}
+			function body(ctx){
+				ctx.moveTo(100,50);
+				ctx.lineTo(100,60);
+				ctx.stroke();
+			}
+			function leftLeg(ctx){
+				ctx.moveTo(100,60);
+				ctx.lineTo(95,70);
+				ctx.stroke();
+			}
+			function rightLeg(ctx){
+				ctx.moveTo(100,60);
+				ctx.lineTo(105,70);
+				ctx.stroke();
+			}
+			function leftArm(ctx){
+				ctx.moveTo(100,52);
+				ctx.lineTo(95,60);
+				ctx.stroke();
+			}
+			function rightArm(ctx){
+				ctx.moveTo(100,52);
+				ctx.lineTo(105,60);
+				ctx.stroke();
+			}
+		</script>
+		<style>
+			canvas{
+				border:1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="contentoppgaver">
+		<canvas id="myCanvas" width="200" height="100" >
+		</canvas>
+		<br/>
+		<input type="text" id="txtWord" maxLength="1"></input>
+		<button id="btnSend">check</button>
+		<br/>
+		<p id="utskrift2"></p>
+		<p id="utskrift"></p>
+		</div>
+	</body>
+</html>

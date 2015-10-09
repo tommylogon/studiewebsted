@@ -36,7 +36,6 @@
     text-decoration:underline;
 }
 
-/*--- DROPDOWN ---*/
 #nav ul{
     background:#FFF;
     background:rgba(255,255,255,0);
@@ -52,27 +51,16 @@
 #nav ul a{
     white-space:nowrap;
 }
-#nav li:Hover ul{ /* Display the dropdown on hover */
-    display:block; /* Bring back on-screen when needed */
+
 }
-#nav li:Hover a{ /* These create persistent hover states, meaning the top-most link stays 'hovered' even when your cursor has moved down the list. */
-    background:#6b0c36;
-    text-decoration:underline;
-}
-#nav li:Hover ul a{ /* The persistent hover state does however create a global style for links even before they're hovered. Here we undo these effects. */
-    text-decoration:none;
-}
-#nav li:Hover ul li a:click{ /* Here we define the most explicit hover states--what happens when you hover each individual link. */
-    background:#333;
-}
-/*---header---*/
 body{
-	display:flex;
-	flex-direction: row;
+	 display:flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     align-content: flex-start;
     align-items: stretch;
+	background:black;
 }
 header{
 	background-color:red;
@@ -91,6 +79,8 @@ section{
     flex-shrink: 0;
     flex-basis: 200px;
 	display:flex;
+	padding-top:40px;
+	padding-bottom:180px;
 	flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
@@ -99,17 +89,24 @@ section{
 }
 article{
 	background-color:yellow;
-	flex-grow: 1;
+	float:left;
+	flex-grow: 3;
     flex-shrink: 0;
     flex-basis: 200px;
-	margin-right:20px;
+	margin-right:60px;
+	
+	display:flex;
+	flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    align-items: center;
 }
 aside{
 	background-color:blue;
 	float:right;
-	flex-grow: 1;
-    flex-shrink: 0;
-    flex-basis: 200px;
+	width:230px;
+	
 }
 #asidebar li{
 	border:3px solid black;
@@ -123,6 +120,7 @@ aside{
 
 #handlekurv{
 	background:pink;
+	float:left;
 	flex-grow: 1;
     flex-shrink: 0;
     flex-basis: 20px;
@@ -134,14 +132,16 @@ aside{
 }
 .products{
 	margin:1px;
-    width:150px;
+	width:150px;
+	height:100px;
 }
 .prodHold{
 	margin:2px;
-	
 	flex-grow: 1;
-    flex-shrink: 0;
-    flex-basis: 50px;
+    flex-shrink: 2;
+    flex-basis: 150px;
+	background:teal;
+	
 }
 footer{
 	background-color:orange;

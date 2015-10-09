@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="../../swcss.css">
+		<script>
+			window.onload = oppstart;
+			
+			function oppstart(){
+				
+				document.getElementById("utskrift").innerHTML = adding(4,3);
+			
+			}
+			function adding(a,b){
+				return a+b;
+			}
+			
+		</script>
+	</head>
+	<body>
+		<div class="contentoppgaver">
+			<p>	en function er en block med kode som har et navn, og som har parameterer i parantese.
+				disse parameterne kan bli forandret andre steder men virker som lokale variabler inni kod blokken.
+				dette gjør at det er lettere og alge mindre kode blokker å lettere å bruke samme blokk med kode i andre prosekter.
+			</p>
+			<p>	
+				argumenter er "variablene" som functionen skal bruke. å plaseres lengre opp i koden. <br/>
+				returverdien er verdien som funtione lager når functionen er ferdig utført. den kan man kalle på når functionen er ferdig.
+			</p>
+			<p id="utskrift"></p>
+		</div>
+	</body>
+</html>

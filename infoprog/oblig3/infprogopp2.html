@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="../../swcss.css">
+		<script>
+			window.onload = oppstart;
+			
+			function oppstart(){
+				document.getElementById("btnStart").onclick = innenforInterval(5,1,10);
+				alert(innenforInterval);				
+			}
+			function innenforInterval(tall,fra,til){
+				if(tall>fra === true){
+					if(tall<til === true){
+						return "ja";
+					}
+					else{
+						return "nei";
+					}
+				}
+				else{
+					return "nei";
+				}
+				alert(innenforInterval);
+			}
+				
+			
+		</script>
+	</head>
+	<body>
+		<div class="contentoppgaver">
+			<button id="btnStart">start</button>
+			<p id="utskrift"></p>
+			<p></p>
+		</div>
+	</body>
+</html>

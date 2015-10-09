@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="../../swcss.css">
+		<script>
+			window.onload = oppstart;
+			
+			function oppstart(){
+			
+				
+				
+				document.getElementById("btnStart").onclick = sendOutAlert;	
+							
+			}
+			function findBiggestOfArray(array,biggest){
+				
+				for(var i=0;i<array.length;i++){
+					if(array[i]>biggest){
+						biggest=array[i];
+					}
+				}
+				return biggest;
+				
+			}			
+			function findSumOfArray(array,sum){
+				for(var i=0;i<array.length;i++){
+					sum+=array[i];
+				}
+				return sum;
+			}
+			function findAvrgOfArray(array,sumOfArray,avrg){
+				avrg=sumOfArray/=array.length;
+				return avrg;
+			}
+			function searchArray(array,search,found){
+				for(var i=0;i<array.length;i++){
+					if(array[i]==search){
+						found=array[i];
+						return "jeg fant " + found;
+					}
+					else{
+						return "jeg fant ikke " + search;
+					}
+				}
+			}
+			
+			function sendOutAlert(biggest,sum,avrg,found){
+				
+				biggestInArray =findBiggestOfArray(array=[6,4,78,9,97,546,78,3,99,47,76,89,49,3,6,65],0);
+				sumOfArray = findSumOfArray(array,0);
+				avrgOfArray = findAvrgOfArray(array,sumOfArray,0)
+				foundInArray = searchArray(array,search=document.getElementById("tall").value,0)
+				
+				alert("det største tallet er " + biggestInArray);
+				alert("summen er " + sumOfArray);
+				alert("gjennomsnittet er " + avrgOfArray);
+				alert(foundInArray);
+			}
+		</script>
+	</head>
+	<body>
+		<div class="contentoppgaver">
+		<p> husk og skrive in et tall</p>
+		<input type="number" id="tall"></input>
+			<button id="btnStart">start</button>
+			<p id="utskrift"></p>
+		</div>
+	</body>
+</html>
