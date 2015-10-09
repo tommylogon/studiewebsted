@@ -7,8 +7,16 @@
 			window.onload = oppstart;
 			
 			function oppstart(){
-				document.getElementById("btnStart").onclick = innenforInterval(5,1,10);
-				alert(innenforInterval);				
+			
+				document.getElementById("btnStart").onclick = start;
+					
+			}
+			function start(){
+				var tall = 	document.getElementById("tall").value;
+				var fra = 0;
+				var til = 10;
+				var output = innenforInterval(tall,fra,til);
+				document.getElementById("utskrift").innerHTML += output;
 			}
 			function innenforInterval(tall,fra,til){
 				if(tall>fra === true){
@@ -22,7 +30,7 @@
 				else{
 					return "nei";
 				}
-				alert(innenforInterval);
+				
 			}
 				
 			
@@ -30,6 +38,7 @@
 	</head>
 	<body>
 		<div class="contentoppgaver">
+			<input type="number" id="tall"></input>
 			<button id="btnStart">start</button>
 			<p id="utskrift"></p>
 			<p></p>
