@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Nettbutikk Checkout</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="../tlf.css">
+		<link rel="stylesheet" type="text/css" href="../styles.css">
+		<script>
+				window.onload = start;
+	
+			function start(){
+						document.getElementById("checkout").onclick = payAndDelivery;
+						document.getElementById("selProd").onchange = addProdNum;
+
+			}
+			function addProdNum(){
+				var prodnum = document.getElementById("selProd").value;
+				document.getElementById("prdNum").innerHTML = prodnum;
+			}
+			function payAndDelivery(){
+				var produkt= document.getElementById("selProd").value;
+				alert("du har kjøpt " + produkt + " og den forventes levert imorgen");
+			}
+		</script>
+	<body>
+
+		<header>
+            <a href="index.html">
+                <img id="nettlogo" src="../logo-nettbutikk.jpg" alt="" width="300px">
+            </a>
+        
+        </header>
+
+		<nav>
+			<ul id="nav">
+				
+                <li>
+					<a href="../index.html">Home</a>
+				</li>
+
+				<li>
+					<a href="../produkter/data/data.html">Data</a>
+				</li>
+                
+				<li>
+					<a href="../produkter/telefon/telefon.html">Telefon</a>
+				</li>
+
+
+				<li>
+					<a href="../produkter/tv/tv.html">TV</a>
+                </li>
+				
+                <li>
+					<a href="../produkter/vaskemaskin/vaskemaskin.html">Vaskemaskin</a>	
+                </li>
+				
+                <li>
+					<a href="#">kontaktinformasjon</a>
+				</li>
+                
+
+				<div id="handlekurv">
+					<img src="../Handlevogn.JPG" alt="handlekurv" width="50px"/>
+			    </div>
+
+			</ul>
+			
+		</nav>
+		<section>
+			<h1>heading</h1>
+			<article>
+				<h2>Check out</h2>
+               
+                    
+                    Velg produkt:<br>
+                    <select id="selProd">
+						<option value="0"></option>
+						<option value="1358">acer</option>
+					</select>
+                    <br>
+                    Produkt nummer:<br>
+                    <input type="number"  id="prdNum">
+                    
+                    
+                    <br><br>
+                    <p>Personopplysninger:</p>
+                    Navn:<br>
+                    <input type="text" name="Navn">
+                    <br>
+                    Adresse:<br>
+                    <input type="text" name="Adresse">
+                    <br>
+                    Land:<br>
+                    <input type="text" name="Land">
+                    <br><br>
+                    <p>Kortinformasjon:</p>
+                    Navn:<br>
+                    <input type="text" name="Navn">
+                    <br>
+                    Kortnummer:<br>
+                    <input type="number" name="Kortnummer">
+                    <br>
+                    Sikerhetskode:<br>
+                    <input type="number" name="Sikkerhetskode">
+
+                    <br>
+                    <button id="checkout">Check out</button><br>
+                    <br><br>
+                    
+
+                           
+               
+				
+				
+			</article>
+			<aside>
+				<ul id="asidebar">
+					<li><a href="#">dagens nytt</a></li>
+					<li><a href="#">support</a></li>
+					<li><a href="#">deals!</a></li>
+					<li><a href="#">info</a></li>
+					<li><a href="#">sånn</a></li>
+					<li><a href="#">masse</a></li>
+				</ul>
+			</aside>
+		
+		</section>
+		
+		<footer>Laget av Tommy J, Tommy S, Mathias og Andreas</footer>
+	</body>
+</html>
