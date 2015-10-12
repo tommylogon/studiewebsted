@@ -16,7 +16,7 @@
 				var fra = 0;
 				var til = 10;
 				var output = innenforInterval(tall,fra,til);
-				document.getElementById("utskrift").innerHTML += output;
+				document.getElementById("utskrift").innerHTML += output + "<br/>";
 			}
 			function innenforInterval(tall,fra,til){
 				if(tall>fra === true){
@@ -37,6 +37,11 @@
 		</script>
 	</head>
 	<body>
+		<div class="contentoppgaver">
+			<h1>Oppgave 2</h1>
+			<p>Lag ferdig en funksjon som sjekker om et tall er innenfor et intervall(returnerer en boolean).
+				lag så 2-3 utskrifter, der denne funksjon er i bruk</p>
+		</div>
 		<div class="contentoppgaver">
 			<input type="number" id="tall"></input>
 			<button id="btnStart">start</button>
