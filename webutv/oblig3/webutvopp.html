@@ -4,29 +4,83 @@
 		<title>Webutvikling oppgave</title>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" type="text/css" href="../../swcss.css"/>
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine"/>
 		<Style>
+		
+		.p1{
+			font-family:Tangerine;
+			font-size:40px;
+		}
+		@keyframes example {
+			0%   {background-color: red; 	left:0px;top:0px;}
+			12%  {background-color: yellow;	left:200px;top:0px;}
+			25%	 {background-color: green;	left:200px;top:200px;}  
+			50% {background-color: blue;	left:0px;top:200px;}
+			62%	 {background-color: green;	left:200px;top:0px;}
+			75%  {background-color: yellow;	left:200px;top:200px;}			
+			100%   {background-color: red;	left:0px;top:0px;}
+		}
+		.tinyBox{
+			width:100px;
+			height:100px;
+			position:relative;
+			background-color:red;
+			animation-name:example;
+			animation-duration:10s;
+		}
 		</style>
 	</head>
 	<body>
 		<div class="contentoppgaver">
 			<h1>Oppgave 1:</h1>
-				<p>Vi gjør ferdig nettsiden <a href="nettbutikk/index.html">NETTSIDE</a></p>
+				<p>Vi gjør ferdig nettsiden <a href="../oblig2/nettbutikk/index.html">NETTSIDE</a></p>
 		</div>
 		<div class="contentoppgaver">
 			<h1>Oppgave 2</h1>
-				<p></p>
+				<img src="validator1.png" alt="validator" width="600" />
+				<img src="validator2.png" alt="validator" width="600"/>
+				<img src="validator3.png" alt="validator" width="600"/>
+				<img src="validator4.png" alt="validator" width="600"/>
+				<img src="validator5.png" alt="validator" width="600"/>
 		</div>
 		<div class="contentoppgaver">
 			<h1>Oppgave 3</h1>
-				<p></p>
+				<p>	Oppsummering: Mathias: Har gjort tlf.css, og satt opp media query. Funnet bilder. Gjort små endringer i index.html
+					Grahn: Jobbet med styles.css og wireframe, har også jobbet med produktsidene, tillegg til en del småfiksing i html og css. 
+					Tommy J: Har jobbet med checkout siden, kontaktinformasjon siden, gjort aside på html sidene, og gjort forskjellige småting i html filene.
+					Tommy S: jobbet med layout, og litt javascripting. også prøvd med på flexbox men den virka ikke på telefon. fikset en del css og lagde navbaren. ellers for det meste bare bugfiksing
+			<br/>
+			<a href="https://github.com/tommylogon/nettbutikk">github linke</a></p>
 		</div>
 		<div class="contentoppgaver">
 			<h1>Oppgave 4</h1>
-				<p></p>
+				<p class="p1">Webfonter er et måte og bruke nye fonter på som ikke virker på samme sett som de gamle web-safe fontene, der tar du en font fra et lager på nettet å kan bruke så alle akn se den uten og ha den instalert lokalt på sin data eller sin nettleser.</p>
+				<p>video er en lettere måte og sette in videoer i html dokumenter, ved å ikke pruke plugins men bare sette den in direkt i html.</p>
+				 <video width="320" height="240" controls>
+					  <source src="squadron42.mp4" type="video/mp4">
+				</video> 
+				<div class="tinyBox">css animasjon er lett og gøy :) </div>
+				<p>Grunnen til css animasjon er at det gir en lettere måte og animere ting på en nettsiden uten javascript</p>
+				<p>MathML er en utvidelse til html som gjøre det lettere og finne go kopiere/dele matematiske formler, men som er litt komplisert med mange nye tagger.</p>
+				<p>Eksemple</p>
+				<p>
+					<math>
+						<msqrt>
+							<mn>2</mn>
+						</msqrt>
+					</math>
+				</p>
+				<p>svg gir en lett måte og lage tegninger i html uten og bruke canvaselementer.</p>
+				<svg width="200" height="200">
+					<ellipse cx="100" cy="100" rx="40" ry="50" stroke="black" stroke-width="4" fill="white" />
+					<ellipse cx="80" cy="100" rx="10" ry="5" stroke="black" stroke-width="2" fill="black" />
+					<ellipse cx="120" cy="100" rx="10" ry="5" stroke="black" stroke-width="2" fill="black" />
+					<ellipse cx="100" cy="130" rx="15" ry="7" stroke="black" stroke-width="2" fill="black" />
+				</svg>
 		</div>
 		<div class="contentoppgaver">
 			<h1>Oppgave E.1</h1>
-				<p></p>
+				<p>fordelen med MathML er at kan kan søke på formler og finne den, da søkemotoren kan lese en formel i mathml men ikke et bilde med en formen hvis det ikke har navn som den skønner har og gjøre md formlelen, man kan gså lettere dele den ved og bare kopiere den som tekst. ulempen er at det renger en del nye tagger som kan være vanselig og huske i førsten men ellers syns eg edet er en veldig god måte og gjøre det på.</p>
 		</div>
 	</body>
 </html>
