@@ -1,0 +1,27 @@
+#player1{
+		float:left;
+		border:solid black 2px;
+}
+#player2{
+	float:right;
+	border:solid black 2px;
+}
+body{
+	background-image:url("colorpictures/background.jpg");
+		background-color: #cccccc;
+}
+p{
+	color:white;
+}
+#middle{
+	position:relative;
+	top:0px;
+	left:700px;
+	width:200px;
+	font-size:20px;
+	color:white;
+	z-index:9999;
+}
+#rbAI{
+	color:white;
+}

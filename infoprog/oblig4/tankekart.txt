@@ -1,0 +1,35 @@
+oblig 4 tanke
+1. ship vs ship 
+	1.stats
+		1. speed
+		2. health
+		3. damage
+	2.types
+		1.light(gladius)
+			1.speed:50
+			2.dps:15
+			3.health:160
+		2.medium(avenger)
+			1.speed:35
+			2.damage:21
+			3.health:134
+		3.hevymedium(hornet)
+			1.speed:25
+			2.damage:48
+			3.health:232	
+		4.heavy.(redeemer)
+			1.speed:20
+			2.damage:85
+			3.health:420
+		5.capital(retaliator)
+			1.speed:10
+			2.damage:100
+			3.health:1880
+	3.info
+		1.damage=size*number of guns
+		2.speed=(1/tr)*100
+		3.health=weight
+1. features
+	1.random target
+	2.time based
+	3.grapic health
